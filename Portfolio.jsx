@@ -29,8 +29,8 @@ export default function Portfolio() {
       description: 'Autonomous AI research assistant that fetches papers from ArXiv and OpenAlex, ranks them using embeddings, performs trend analysis, and generates research roadmaps using LangGraph workflows.',
       highlights: ['Multi-source paper retrieval', 'Embedding-based ranking', 'PDF understanding', 'Trend analysis', 'Research gap detection'],
       tech: ['LangGraph', 'Gemini 1.5', 'Streamlit', 'SentenceTransformers', 'PyMuPDF', 'Vector Embeddings'],
-      github: 'https://github.com/Abhilashaaaaaa13/Deep-Research-Agent',
-      demo: 'https://github.com/Abhilashaaaaaa13/Deep-Research-Agent',
+      github: 'https://github.com/Abhilashaaaaaa13/AI_research_agent',
+      demo: 'https://github.com/Abhilashaaaaaa13/AI_research_agent',
       color: 'from-blue-600 to-cyan-500'
     },
     {
@@ -39,7 +39,7 @@ export default function Portfolio() {
       description: 'Context-aware document intelligence system that answers questions from uploaded docs, automatically searches the web for missing information, and builds a persistent knowledge base.',
       highlights: ['Hybrid retrieval + reranking', 'OCR support', 'Web-augmented knowledge base', 'Intelligent query routing', 'Knowledge graph generation'],
       tech: ['RAG', 'ChromaDB', 'LangChain', 'Groq', 'BM25', 'CrossEncoder', 'Streamlit'],
-      github: 'https://github.com/Abhilashaaaaaa13/DOCU-AI',
+      github: 'https://github.com/Abhilashaaaaaa13/DocuAI',
       demo: 'https://docuai-assistant.streamlit.app/',
       color: 'from-purple-600 to-pink-500'
     },
@@ -49,7 +49,7 @@ export default function Portfolio() {
       description: 'AI-powered cold outreach platform that scrapes startups, researches companies, generates personalized emails, sends follow-ups automatically, and tracks replies.',
       highlights: ['Startup scraping', 'AI personalization', 'Gmail automation', 'Follow-up scheduler', 'Reply detection', 'Complete workflow'],
       tech: ['LangGraph', 'Groq LLMs', 'Streamlit', 'Playwright', 'Gmail SMTP/IMAP', 'APScheduler'],
-      github: 'https://github.com/Abhilashaaaaaa13/JobPilotAI',
+      github: 'https://github.com/Abhilashaaaaaa13/JobPilot-AI',
       demo: 'https://web-production-5a31f.up.railway.app/',
       color: 'from-green-600 to-emerald-500'
     }

@@ -29,8 +29,8 @@ export default function Portfolio() {
       description: 'Autonomous AI research assistant that fetches papers from ArXiv and OpenAlex, ranks them using embeddings, performs trend analysis, and generates research roadmaps using LangGraph workflows.',
       highlights: ['Multi-source paper retrieval', 'Embedding-based ranking', 'PDF understanding', 'Trend analysis', 'Research gap detection'],
       tech: ['LangGraph', 'Gemini 1.5', 'Streamlit', 'SentenceTransformers', 'PyMuPDF', 'Vector Embeddings'],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/Abhilashaaaaaa13/Deep-Research-Agent',
+      demo: 'https://github.com/Abhilashaaaaaa13/Deep-Research-Agent',
       color: 'from-blue-600 to-cyan-500'
     },
     {
@@ -39,8 +39,8 @@ export default function Portfolio() {
       description: 'Context-aware document intelligence system that answers questions from uploaded docs, automatically searches the web for missing information, and builds a persistent knowledge base.',
       highlights: ['Hybrid retrieval + reranking', 'OCR support', 'Web-augmented knowledge base', 'Intelligent query routing', 'Knowledge graph generation'],
       tech: ['RAG', 'ChromaDB', 'LangChain', 'Groq', 'BM25', 'CrossEncoder', 'Streamlit'],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/Abhilashaaaaaa13/DOCU-AI',
+      demo: 'https://docuai-assistant.streamlit.app/',
       color: 'from-purple-600 to-pink-500'
     },
     {
@@ -49,8 +49,8 @@ export default function Portfolio() {
       description: 'AI-powered cold outreach platform that scrapes startups, researches companies, generates personalized emails, sends follow-ups automatically, and tracks replies.',
       highlights: ['Startup scraping', 'AI personalization', 'Gmail automation', 'Follow-up scheduler', 'Reply detection', 'Complete workflow'],
       tech: ['LangGraph', 'Groq LLMs', 'Streamlit', 'Playwright', 'Gmail SMTP/IMAP', 'APScheduler'],
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/Abhilashaaaaaa13/JobPilotAI',
+      demo: 'https://web-production-5a31f.up.railway.app/',
       color: 'from-green-600 to-emerald-500'
     }
   ];
@@ -256,13 +256,13 @@ export default function Portfolio() {
           <div className="border-t border-slate-800 pt-12">
             <p className="text-center text-slate-400 mb-6">Or connect with me directly:</p>
             <div className="flex justify-center gap-6">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors text-2xl">
+              <a href="https://github.com/Abhilashaaaaaa13" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors text-2xl">
                 🔗
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors text-2xl">
+              <a href="https://www.linkedin.com/in/abhilasha-653b33277" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors text-2xl">
                 💼
               </a>
-              <a href="mailto:your.email@example.com" className="p-3 bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors text-2xl">
+              <a href="mailto:abhilasha1333@example.com" className="p-3 bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors text-2xl">
                 ✉️
               </a>
             </div>

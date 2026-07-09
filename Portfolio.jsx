@@ -22,6 +22,56 @@ export default function Portfolio() {
     setFormData({ name: '', email: '', message: '' });
   };
 
+  const stats = [
+    { value: 'GGSIPU', label: 'COLLEGE' },
+    { value: '9.2', label: 'CGPA' },
+    { value: '3+', label: 'INTERNSHIPS' }
+  ];
+
+  const experience = [
+    {
+      company: 'Mobineers Infosystems Pvt Ltd',
+      role: 'Gen AI Intern',
+      duration: 'Jan 2026 – Apr 2026',
+      description: [
+        'Built a WhatsApp-based AI Task Management Assistant using Google Gemini, Python, Redis, and MongoDB.',
+        'Designed a multi-agent architecture for intent classification, parameter extraction, and conversation management.',
+        'Implemented multi-turn conversation handling with Redis-based session management and context preservation.',
+        'Integrated external APIs for automated task creation and workflow execution.',
+        'Developed robust handling for intent switching, ambiguous queries, stale sessions, and missing parameters.',
+        'Optimized LLM performance with asynchronous execution, timeout handling, and retry mechanisms.'
+      ],
+      color: 'from-blue-600 to-cyan-500'
+    },
+    {
+      company: 'Phantom AI',
+      role: 'Automation Intern',
+      duration: 'May 2026 – Jun 2026',
+      description: [
+        'Developed a RAG-based dealership chatbot using n8n, Supabase Vector Database, and LLMs.',
+        'Built automated knowledge ingestion and retrieval pipelines for accurate context-aware responses.',
+        'Implemented lead identification and qualification from customer conversations.',
+        'Developed sentiment analysis to classify customer intent and satisfaction levels.',
+        'Automated follow-up actions based on detected sentiment and lead status using workflow automation.',
+        'Integrated vector search with conversational AI to improve response relevance and retrieval accuracy.'
+      ],
+      color: 'from-purple-600 to-pink-500'
+    },
+    {
+      company: 'Moveabox',
+      role: 'AI/ML Intern',
+      duration: 'Jun 2026 – Present',
+      description: [
+        'Designed and developed a Zoho-inspired ERP module for invoice and business operations management.',
+        'Implemented advanced invoice features including filtering, export functionality, recurring invoices, and report scheduling.',
+        'Developed a scalable UI following modern ERP workflows and user experience patterns.',
+        'Building an AI-powered marketing automation agent to execute personalized customer engagement and follow-up campaigns.',
+        'Working on workflow automation for notifications, email campaigns, and customer lifecycle management using AI agents.'
+      ],
+      color: 'from-green-600 to-emerald-500'
+    }
+  ];
+
   const projects = [
     {
       title: 'Deep Research Agent',
@@ -71,16 +121,18 @@ export default function Portfolio() {
     'AI + Product Thinking'
   ];
 
+  const navItems = ['about', 'skills', 'experience', 'projects', 'interests', 'contact'];
+
   return (
     <div className="bg-slate-950 text-slate-100 min-h-screen">
       <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md z-50 border-b border-slate-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              AI Engineer
+              Abhilasha
             </div>
             <div className="hidden md:flex gap-8">
-              {['hero', 'about', 'skills', 'projects', 'interests', 'contact'].map(item => (
+              {navItems.map(item => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -96,7 +148,7 @@ export default function Portfolio() {
           </div>
           {mobileMenuOpen && (
             <div className="md:hidden pb-4 space-y-2">
-              {['hero', 'about', 'skills', 'projects', 'interests', 'contact'].map(item => (
+              {navItems.map(item => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -114,13 +166,24 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 inline-block">
             <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white text-3xl font-bold">
-              AE
+              A
             </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">AI/ML Engineer</h1>
+          <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-3">AI/ML Engineer</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">Abhilasha</h1>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
             Building intelligent systems, autonomous agents, and real-world AI products that solve complex problems.
           </p>
+
+          <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto mb-12">
+            {stats.map((stat, idx) => (
+              <div key={idx} className="bg-slate-900 border border-slate-800 rounded-xl px-4 py-5">
+                <div className="text-xl md:text-2xl font-bold text-white mb-1 truncate">{stat.value}</div>
+                <div className="text-[11px] text-slate-400 tracking-wide">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => scrollToSection('projects')}
@@ -172,7 +235,39 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="projects" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-slate-950">
+      <section id="experience" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-slate-950">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12">Experience</h2>
+          <div className="space-y-6">
+            {experience.map((job, idx) => (
+              <div key={idx} className="group relative bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-slate-700 transition-all">
+                <div className={`absolute inset-0 bg-gradient-to-br ${job.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                <div className="relative p-8">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold">{job.role}</h3>
+                      <p className="text-cyan-400 text-sm font-medium">{job.company}</p>
+                    </div>
+                    <span className="text-xs text-slate-400 bg-slate-800 border border-slate-700 rounded-full px-3 py-1 whitespace-nowrap self-start">
+                      {job.duration}
+                    </span>
+                  </div>
+                  <ul className="space-y-2">
+                    {job.description.map((point, i) => (
+                      <li key={i} className="text-slate-300 text-sm leading-relaxed flex gap-2">
+                        <span className="text-cyan-400 flex-shrink-0">▸</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Featured Projects</h2>
           <div className="space-y-8">
@@ -225,7 +320,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="interests" className="py-20 px-4">
+      <section id="interests" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-slate-950">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">What I Like Building</h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -241,7 +336,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-slate-950">
+      <section id="contact" className="py-20 px-4">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-bold mb-4 text-center">Get in Touch</h2>
           <p className="text-center text-slate-400 mb-12">Have a project in mind? Let's talk.</p>
@@ -272,7 +367,7 @@ export default function Portfolio() {
 
       <footer className="border-t border-slate-800 py-8 px-4 bg-slate-950">
         <div className="max-w-6xl mx-auto text-center text-slate-400 text-sm">
-          <p>© 2024 AI/ML Engineer. Built with React & Tailwind CSS.</p>
+          <p>© 2026 Abhilasha</p>
         </div>
       </footer>
     </div>
